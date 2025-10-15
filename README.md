@@ -43,7 +43,7 @@ Le composant App.tsx contient :
 Liste de super-héros
 - Importation d’un fichier JSON SuperHeros.json.
 - Affichage du nombre total de super-héros.
-- Affichage des noms dans une liste <ul> via ".map".
+- Affichage des noms de superhéros dans une liste <ul>.
 - Recherche dynamique pour filtrer les super-héros selon le texte saisi dans un input.
 
 Technologies utilisées
