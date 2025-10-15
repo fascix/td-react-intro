@@ -1,75 +1,74 @@
-# React + TypeScript + Vite
+# TD React Intro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est un TP d’introduction à **React**, réalisé pour découvrir les composants fonctionnels, la gestion de l’état, les effets secondaires, et l’affichage dynamique de données.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+L’application permet de :
 
-## React Compiler
+- Afficher un message de bienvenue personnalisé.
+- Gérer un compteur interactif avec `useState`.
+- Mettre à jour dynamiquement le titre de la page avec `useEffect`.
+- Importer et afficher une liste de super-héros depuis un fichier JSON.
+- Filtrer la liste des super-héros grâce à un champ de recherche.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Installation
 
-Note: This will impact Vite dev & build performances.
+1. Cloner le dépôt ou créer un projet React (`Vite`) :
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm create vite@latest td-react-intro
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2.	Installer les dépendances :
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+cd td-react-intro
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3.	Lancer le serveur de développement :
+
+npm run dev   
+
+## Fonctionnalités principales :
+
+Le composant App.tsx contient :
+	•	Une variable nom affichée dans le message de bienvenue avec mon prénom
+	•	Un compteur interactif avec boutons '+' et 'Réinitialiser'.
+	•	L’utilisation de 'useEffect' pour mettre à jour le titre de la page à chaque changement du compteur.
+
+Liste de super-héros
+	•	Importation d’un fichier JSON SuperHeros.json.
+	•	Affichage du nombre total de super-héros.
+	•	Affichage des noms dans une liste <ul> via .map().
+	•	Recherche dynamique pour filtrer les super-héros selon le texte saisi dans un input.
+
+Technologies utilisées
+	•	React
+	•	TypeScript 
+	•	Vite
+	•	CSS pour avoir un style style minimal
+
+Structure du projet
+
 ```
+.
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── src
+│   ├── App.css
+│   ├── App.tsx
+│   ├── SuperHeros.json
+│   ├── assets
+│   │   └── react.svg
+│   ├── index.css
+│   └── main.tsx
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+```
+
+
