@@ -22,31 +22,35 @@ npm create vite@latest td-react-intro
 
 2.	Installer les dépendances :
 
+```bash
 cd td-react-intro
 npm install
+```
 
 3.	Lancer le serveur de développement :
 
+```bash
 npm run dev   
+```
 
 ## Fonctionnalités principales :
 
 Le composant App.tsx contient :
-	•	Une variable nom affichée dans le message de bienvenue avec mon prénom
-	•	Un compteur interactif avec boutons '+' et 'Réinitialiser'.
-	•	L’utilisation de 'useEffect' pour mettre à jour le titre de la page à chaque changement du compteur.
+- Une variable nom affichée dans le message de bienvenue avec mon prénom
+- Un compteur interactif avec boutons '+' et 'Réinitialiser'.
+- L’utilisation de 'useEffect' pour mettre à jour le titre de la page à chaque changement du compteur.
 
 Liste de super-héros
-	•	Importation d’un fichier JSON SuperHeros.json.
-	•	Affichage du nombre total de super-héros.
-	•	Affichage des noms dans une liste <ul> via .map().
-	•	Recherche dynamique pour filtrer les super-héros selon le texte saisi dans un input.
+- Importation d’un fichier JSON SuperHeros.json.
+- Affichage du nombre total de super-héros.
+- Affichage des noms dans une liste <ul> via .map().
+- Recherche dynamique pour filtrer les super-héros selon le texte saisi dans un input.
 
 Technologies utilisées
-	•	React
-	•	TypeScript 
-	•	Vite
-	•	CSS pour avoir un style style minimal
+- React
+- TypeScript
+- Vite
+- CSS pour avoir un style style minimal
 
 Structure du projet
 
